@@ -1,0 +1,3 @@
+bici_bike_homepage:
+    path:     /
+    defaults: { _controller: BiciBikeBundle:Default:index }
