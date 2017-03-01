@@ -54,9 +54,10 @@ class User {
 
     public function __construct() {
         $this->orders = new ArrayCollection();
+        $this->isadmin = false;  // All new users are not admins
     }
 
- 
+
 
     /**
      * Get id
