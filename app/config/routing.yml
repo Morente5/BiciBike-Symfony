@@ -1,42 +1,6 @@
-bici_bike:
-    path: /
-    defaults: { _controller: BiciBikeBundle:Default:index}
+app:
+    resource: "@BiciBikeBundle/Controller/"
+    type:     annotation
 
-
-bici_bike_product:
-    path: /product/{id}
-    defaults: { _controller: BiciBikeBundle:Product:product}
-
-bici_bike_all_products:
-    path: /product
-    defaults: { _controller: BiciBikeBundle:Product:allproducts}
-
-bici_bike_category:
-    path: /category/{id}
-    defaults: { _controller: BiciBikeBundle:Product:category}
-
-
-bici_bike_create:
-    path: /create
-    defaults: { _controller: BiciBikeBundle:Product:create}
-    requirements: {_method: post}
-
-bici_bike_new:
-    path: /new
-    defaults: { _controller: BiciBikeBundle:Product:new}
-
-
-bici_bike_edit:
-    path: /edit/{id}
-    defaults: { _controller: BiciBikeBundle:Product:edit}
-
-bici_bike_update:
-    path: /update/{id}
-    defaults: { _controller: BiciBikeBundle:Product:update}
-    requirements: {_method: post|put}
-
-
-bici_bike_delete_product:
-    path: /product/delete/{id}
-    defaults: { _controller: BiciBikeBundle:Product:delete}
-    requirements: {_method: post|delete}
+# api_login_check:
+#     path: /api/login_check
