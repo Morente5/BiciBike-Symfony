@@ -20,7 +20,7 @@ class OrderController extends FOSRestController {
      * @Rest\Get("/order/{orderId}")
      */
     public function orderAction($orderId) {
-        $bike = $this->getDoctrine()
+        $order = $this->getDoctrine()
             ->getRepository('BiciBikeBundle:Order')
             ->find($orderId);
         return $order;
@@ -60,7 +60,7 @@ class OrderController extends FOSRestController {
     /**
      * @Rest\Post("/orderline")
      */
-    public function createOrderAction(Request $request) {
+    public function createOrderLineAction(Request $request) {
 
         $orderId = $request->get('order');
         $order = $this->getDoctrine()->getRepository('BiciBikeBundle:Order')
